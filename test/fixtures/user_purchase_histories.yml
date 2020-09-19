@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  store_books_id: 1
+  store_id: 1
+  transaction_amount: 
+  transaction_date: 2020-09-19 17:11:24
+
+two:
+  store_books_id: 1
+  store_id: 1
+  transaction_amount: 
+  transaction_date: 2020-09-19 17:11:24

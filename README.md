@@ -310,12 +310,12 @@ please into server index
 
 
 ## Import Data Commands
-  `rake import_data:book_store["book_store_data"]`
-  `rake import_data:user["user_data"]`
+  `rake import_data:book_store["book_store_data"]`  
+  `rake import_data:user["user_data"]`  
 Original data is in /public dir
 
 ## Test Coverage Report(optional)
-  check report [here](#test-coverage-reportoptional)
+  not have
   
 ## Demo Site Url (optional)
-  demo ready on [heroku](#demo-site-url-optional)
+  

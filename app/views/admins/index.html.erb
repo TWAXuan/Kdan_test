@@ -1,0 +1,21 @@
+<h1>功能介面</h1>
+
+<table class= "table">
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <td><%= link_to "編輯書店", store_index_path %></td>
+    <td><%= link_to "編輯書本", book_index_path %></td>
+    <td><%= link_to "編輯使用者", user_index_path %></td>
+  </tbody>
+</table>
+
+<br>
+
+<h1>使用者流程</h1>
+<%= button_to "使用者購書流程", user_purchase_login_path, class: "btn", method: :get %>
+

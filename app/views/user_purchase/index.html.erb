@@ -1,0 +1,33 @@
+<h2>使用者: <%= @user.name %></h2>
+<p>
+
+<table class= "table">
+  <%= form_for "user_purchase" ,url: user_purchase_check_path do |f|%>
+
+  <thead>
+    <tr>
+      <th>流程</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>選擇書店:</td>
+      <td><%= f.collection_select(:store_id, Store.all, :id, :name) %></td>
+    </tr>
+    <tr>
+      <td>選擇書本:</td>
+      <td><%= f.collection_select(:books_id, StoreBook.all, :id, :name) %></td>
+    </tr>
+
+    <%= f.hidden_field :user_id, value: @user.id %>
+    <tr>
+      <td><%= f.submit "確認", disable_with: '資料傳送中...'  %></td>
+    </tr>
+    
+  <% end %>
+    
+ 
+    
+  </tbody>
+</table>

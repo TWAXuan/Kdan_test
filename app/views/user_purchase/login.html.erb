@@ -1,0 +1,20 @@
+<h1>選擇登入的使用者</h1>
+
+<table class= "table">
+  <thead>
+    <tr>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= link_to 'Login', user_purchase_index_path("user": {"id": user.id}) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

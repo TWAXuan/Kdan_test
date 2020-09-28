@@ -1,0 +1,39 @@
+<h2>使用者: <%= @user.name %></h2>
+<p>
+
+<table class= "table">
+  <%= form_for "user_purchase", url: user_purchase_index_path  do |f|%>
+
+  <thead>
+    <tr>
+      <th>流程</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>選擇書店:</td>
+      <td><%= f.text_area :store_name, :disabled => true, value: @store.name %></td>
+    </tr>
+    <tr>
+      <td>選擇書本:</td>
+      <td><%= f.text_area :books_name, :disabled => true, value: @book.name %></td>
+    </tr>
+    <tr>
+      <td>金額:</td>
+      <td><h3><%= @book.price %></h3></td>
+    </tr>
+
+    <%= f.hidden_field :user_id, value: @user.id %>
+    <%= f.hidden_field :store_id, value: @store.id %>
+    <%= f.hidden_field :books_id, value: @book.id %>
+    <tr>
+      <td><%= f.submit "確認購買", disable_with: '資料傳送中...' %></td>
+    </tr>
+    
+  <% end %>
+    
+ 
+    
+  </tbody>
+</table>

@@ -1,0 +1,21 @@
+<h1>書本</h1>
+
+<table class= "table">
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @books.each do |abook| %>
+      <tr>
+        <td><%= abook.name %></td>
+        <td>$<%= abook.price %></td>
+        <td><%= link_to 'Edit', edit_book_path(abook) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

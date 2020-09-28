@@ -1,0 +1,21 @@
+<p>
+
+<table>
+  <tbody>
+    <%= form_for @books, url: book_path do |f| %>
+      
+      <tr>
+        <td><h2>書名:</h2></td>
+        <td> <%= f.text_field :name %></td>
+      </tr>
+      <tr>
+        <td><h2>價格:</h2></td>
+        <td> <%= f.text_field :price %></td>
+      </tr>
+      <tr>
+        <td><%= f.submit "修改", disable_with: '修改中...', class: "btn"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

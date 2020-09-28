@@ -1,0 +1,17 @@
+<p>
+
+<table>
+  <tbody>
+    <%= form_for @users, url: user_path do |f| %>
+      
+      <tr>
+        <td>使用者名稱:</td>
+        <td><%= f.text_field :name %></td>
+      </tr>
+      <tr>
+        <td><%= f.submit "修改", disable_with: '修改中...', class: "btn"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

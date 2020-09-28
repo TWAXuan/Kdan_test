@@ -9,7 +9,10 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class= 'container'>
+      <div class= 'container-sm'>
+        <%= render "layouts/messages" %>
+      </div>
+        <%= yield %>
   </body>
 </html>
